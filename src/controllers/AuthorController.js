@@ -3,6 +3,7 @@ import AuthorService from '../services/AuthorService'
 class AuthorController {
   
   static async addNew(req, res) {
+    
     if (!req.body.firstname || !req.body.lastname) {
       return res.status(400).json({
         status: 'error',
